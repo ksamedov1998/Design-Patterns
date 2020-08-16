@@ -1,7 +1,7 @@
 package creational;
 
-/**
- * Real time examples that uses creational.Singleton design pattern:
+/*
+ * Real time examples that uses creation Singleton design pattern:
  *      - Runtime
  *      - Logger
  *      - Spring Beans
@@ -45,6 +45,12 @@ class LazyLoadedSingleton {
 }
 
 // todo can be check with multiple thread
+/**
+ * for thread safe manner we are using double-check mechanism inside
+ * getInstance() method, that case if thread try to get inside boolean
+ * statement while it is false after another thread already created an instance
+ * ,it will be locked there .
+ * */
 class ThreadSafeSingleton {
     private static volatile ThreadSafeSingleton singleton = null;
     private ThreadSafeSingleton(){
