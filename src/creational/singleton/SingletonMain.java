@@ -1,4 +1,4 @@
-package creational;
+package creational.singleton;
 
 /*
  * Real time examples that uses creation Singleton design pattern:

@@ -40,6 +40,7 @@ public class PrototypeMain {
         System.out.println(anotherMovie.getPrice());
         System.out.println(anotherMovie.getUrl());
         System.out.println(anotherMovie.getRuntime());
+
     }
 
 

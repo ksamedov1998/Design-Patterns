@@ -1,4 +1,4 @@
-package creational;
+package creational.builder;
 
 /* Builder pattern
 * Good to use constructing complex objects.
