@@ -31,7 +31,11 @@ import java.util.List;
  *   System.out.println(arrayOfInts);
  *   System.out.println(listOfInts);
  *
- *
+ *Pitfalls:
+ *  Not a lot!
+ *  Don't complicate
+ *  multiple adapters
+ * don't add functionality
  *
  */
 public class AdapterMain {
