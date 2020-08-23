@@ -22,6 +22,10 @@ package structural.bridge.nonbridge;
 * Has ->
 *   Abstraction, Implementor,Refined Abstraction,Concrete Implementor
 *
+* Pitfalls
+*   More than OOP
+*   Conceptually difficult to plan
+*   Increases complexity
 *
 */
 public class BridgeMain {
