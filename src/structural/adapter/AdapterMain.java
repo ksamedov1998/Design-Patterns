@@ -21,7 +21,6 @@ import java.util.List;
  *   Client centric
  *   Integrate new with old
  *   Interface, but not required
- *   Adaptee can be the implementation
  *
  * We create adapter to connect the older one to new
  *
