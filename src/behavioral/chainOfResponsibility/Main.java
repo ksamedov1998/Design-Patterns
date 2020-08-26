@@ -36,7 +36,6 @@ public class Main{
         VP crystal = new VP();
         CEO jeff = new CEO();
         
-        
         bryan.setSuccessor(crystal);
         crystal.setSuccessor(jeff);
 
