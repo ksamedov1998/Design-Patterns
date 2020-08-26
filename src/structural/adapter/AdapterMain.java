@@ -1,7 +1,5 @@
 package structural.adapter;
 
-import javax.imageio.stream.IIOByteBuffer;
-import java.util.Arrays;
 import java.util.List;
 
 /*
