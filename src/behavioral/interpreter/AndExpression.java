@@ -5,8 +5,8 @@ public class AndExpression implements Expression {
     private Expression exp2;
 
     public AndExpression(Expression exp1,Expression exp2) {
-        this.exp1 = expr1;
-        this.exp2 = expr2;
+        this.exp1 = exp1;
+        this.exp2 = exp2;
     }
 
     @Override
