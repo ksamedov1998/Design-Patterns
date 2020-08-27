@@ -1,5 +1,6 @@
 package behavioral.iterator;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class BikeRepository implements Iterable<String> {
@@ -22,39 +23,44 @@ public class BikeRepository implements Iterable<String> {
 
     @Override
     public Iterator<String> iterator() {
-        Iterator<String> it = new Iterator<String>(){
+        Iterator<String> it = new Iterator<>() {
             private int removedElementCount = 0;
             private int curIndex = 0;
-            
+
             @Override
-            public boolean hasNext(){
+            public boolean hasNext() {
                 return curIndex < bikes.length && bikes[curIndex] != null;
             }
 
             @Override
-            public String next(){
+            public String next() {
                 return bikes[curIndex++];
             }
 
             @Override
-            public void remove(){
+            public void remove() {
+                bikes[curIndex-1] = null;
                 removedElementCount++;
-                bikes[curIndex] = null;
-                if(removedElementCount >= 5 ){
-                    String[] shrinked =  new String[bikes.length - 5];
-                    for(int i = 0,j=0; i<bikes.length; i++){
-                            if(bikes[i] != null){
-                                shrinked[j] = bikes[i];
-                                j++;
-                            }
+                if (removedElementCount >= 5) {
+                    String[] shrank = new String[bikes.length - 5];
+                    for (int i = 0, j = 0; i < bikes.length; i++) {
+                        if (bikes[i] != null) {
+                            shrank[j++] = bikes[i];
+                        }
                     }
-                    bikes = shrinked;
+                    bikes = shrank;
+                    removedElementCount = 0;
                 }
             }
         };
         return it;
     }
 
-    
-    
+    public Integer getSize(){
+        return bikes.length;
+    }
+
+    public void print() {
+        System.out.println(Arrays.toString(bikes));
+    }
 }

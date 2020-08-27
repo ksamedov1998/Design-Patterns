@@ -6,14 +6,14 @@ import java.util.List;
 public class Mediator {
     private final List<Light> lights = new ArrayList<>();
 
-    public void registerLight(final Light light){
+    public void registerLight(Light light){
         lights.add(light);
     }
 
     public void turnOnAllLights() {
-        for (Light curLight : allLights) {
-            if(curLight.isOn()){
-              curLight.toggle();
+        for (Light curLight : lights) {
+            if(!curLight.isOn()){
+              curLight.on();
             }
        }
     }

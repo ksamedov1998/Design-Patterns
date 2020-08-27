@@ -23,8 +23,19 @@ package behavioral.mediator;
 
 */
 public class Main {
-    /* 
-     Almost the same as Command Pattern 
-     but here we have mediator class 
-    */
+    public static void main(String[] args) {
+        Light light1 = new Light("bathroom");
+        Light light2 = new Light("kitchen");
+        Light light3 = new Light("hall");
+
+        Mediator mediator = new Mediator();
+
+        mediator.registerLight(light1);
+        mediator.registerLight(light2);
+        mediator.registerLight(light3);
+
+        Command command = new TurnOnAllLightsCommand(mediator);
+
+        command.execute();
+    }
 }

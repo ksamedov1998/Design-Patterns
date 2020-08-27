@@ -42,11 +42,17 @@ public class Main {
         repo.addBike("Cervelo");
         repo.addBike("Scott");
         repo.addBike("Fuji");
+        repo.addBike("Kross");
+
 
         Iterator<String> bikeIterator =  repo.iterator();
 
         while(bikeIterator.hasNext()){
-                System.out.println(bikeIterator.next());
+            System.out.println(bikeIterator.next());
+            bikeIterator.remove();
         }
+
+        System.out.println(repo.getSize());
+        repo.print();
     }
 }
