@@ -4,7 +4,7 @@ import creational.factory.Website;
 
 /*
 *   Concept
-*       One to Many relationshop
+*       One to Many relationship
 *       Decoupled
 *       Event Handling
 *       Typically called Pub/Sub pattern
